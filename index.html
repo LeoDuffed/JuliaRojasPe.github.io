@@ -1,1 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julia Rojas Pereyra - Científica de Datos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Recoleta:wght@400;600;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Section A: Header Nav Bar -->
+    <header class="header-nav">
+        <nav class="nav-container">
+            <a href="#inicio" class="nav-link">INICIO</a>
+            <a href="#conoceme" class="nav-link">CONOCEME</a>
+            <a href="#proyectos" class="nav-link">PROYECTOS</a>
+            <a href="#skills" class="nav-link">SKILLS</a>
+        </nav>
+    </header>
 
+    <!-- Section B: Hero Section -->
+    <section id="inicio" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-left">
+                <div class="hero-image-placeholder">
+                    <img src="https://via.placeholder.com/600x800/F8F5F0/A33320?text=Julia+Rojas+Pereyra" alt="Julia Rojas Pereyra" class="hero-image">
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="hero-content">
+                    <h1 class="hero-logo">Julia Rojas Pereyra</h1>
+                    <h2 class="hero-title">Cientifica de datos</h2>
+                    <p class="hero-text">
+                        Desarrolladora entusiasta, con una curiosidad insaciable por cómo funcionan las cosas. Desde la creación de videojuegos interactivos con <strong>Pygame</strong> hasta el despliegue de entornos virtuales y bases de datos con <strong>MongoDB</strong> o <strong>SQL</strong>. Me encanta combinar la lógica del cálculo con la creatividad del código para construir proyectos que no solo funcionan, sino que impactan.
+                    </p>
+                    <a href="#" class="btn btn-primary" download>Descarga mi CV</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section C: Marquee/Ticker Bar -->
+    <section class="marquee-section">
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <span>PYTHON EXPERT * DATA ANALYST * DOCKER * SQL * ITAMITA</span>
+                <span>PYTHON EXPERT * DATA ANALYST * DOCKER * SQL * ITAMITA</span>
+                <span>PYTHON EXPERT * DATA ANALYST * DOCKER * SQL * ITAMITA</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section D: Introduction with Hand-Drawn Elements -->
+    <section id="conoceme" class="intro-section">
+        <div class="intro-container">
+            <div class="intro-arrow-left">
+                <svg viewBox="0 0 100 200" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50,0 Q30,50 40,100 T50,200" stroke="var(--color-accent-dark-red)" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    <path d="M45,190 L50,200 L55,190" stroke="var(--color-accent-dark-red)" stroke-width="3" fill="none" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <p class="intro-text">
+                Cientifica de Datos del ITAM apasionada por los algoritmos, la arquitectura de datos y la resolución creativa de problemas.
+            </p>
+            <div class="intro-arrow-right">
+                <svg viewBox="0 0 100 200" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50,0 Q70,50 60,100 T50,200" stroke="var(--color-accent-dark-red)" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    <path d="M45,190 L50,200 L55,190" stroke="var(--color-accent-dark-red)" stroke-width="3" fill="none" stroke-linecap="round"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section E: The Dashed Call-to-Action Box -->
+    <section class="cta-section">
+        <div class="cta-box">
+            <div class="cta-eyebrow">juliarojasmx@gmail.com</div>
+            <h2 class="cta-title">¡ Contáctame !</h2>
+            <a href="https://www.linkedin.com/in/julia-r-876ab7233" target="_blank" class="btn btn-primary">Linkedin</a>
+        </div>
+    </section>
+
+    <!-- Section F: Section Divider Heading -->
+    <section id="proyectos" class="divider-section">
+        <h2 class="divider-title">ALGUNOS DE MIS PROYECTOS</h2>
+    </section>
+
+    <!-- Section G: The Three-Column Card Section -->
+    <section class="projects-section">
+        <div class="projects-container">
+            <div class="project-card">
+                <div class="project-icon">🎮</div>
+                <div class="project-subtitle">GAME DEVELOPMENT</div>
+                <h3 class="project-title">Farah Adventures</h3>
+                <p class="project-text">
+                    Un <em>Endless Runner</em> que rompe la cuarta pared. Conectado a una API en tiempo real, el juego cambia de día a noche y activa lluvia dinámica sincronizada con el clima real de tu ciudad. ¿Podrás romper el récord?
+                </p>
+                <a href="https://github.com/JuliaRojasPe/farah_adventures" target="_blank" class="btn btn-primary">Juega ahora</a>
+            </div>
+            <div class="project-card">
+                <div class="project-icon">📊</div>
+                <div class="project-subtitle">DATA ANALISIS</div>
+                <h3 class="project-title">Movilidad urbana</h3>
+                <p class="project-text">
+                    ¿Cómo se mueve realmente la CDMX? Analizamos 10 meses de operación de Ecobici para detectar patrones ocultos: desde las "mareas" de usuarios que cruzan la ciudad al amanecer, hasta las estaciones críticas que colapsan en horas pico. Un proyecto de Big Data con <strong>PySpark</strong> que convierte datos crudos en estrategias de movilidad urbana.
+                </p>
+                <a href="https://github.com/JuliaRojasPe/Movilidad-Urbana-Ecobici" target="_blank" class="btn btn-secondary">Conocelo</a>
+            </div>
+            <div class="project-card">
+                <div class="project-icon">📈</div>
+                <div class="project-subtitle">DATA ANALISIS</div>
+                <h3 class="project-title">Bolsa de Valores</h3>
+                <p class="project-text">
+                    Analizamos un año de datos de la Bolsa De Valores Mexicana, utilizando MongoDB para limpiar, analizar, y sacar conclusiones de la base de datos masiva, resultando en datos consumibles que nos dan un entendimiento profundo de las tendencias y correlaciones de la Bolsa de Valores.
+                </p>
+                <a href="#" class="btn btn-primary">Conocelo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Extra Section: Software Skills -->
+    <section id="skills" class="skills-section">
+        <div class="skills-container">
+            <h2 class="skills-title">Software Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">🐍 Python</div>
+                <div class="skill-item">⚡ PySpark</div>
+                <div class="skill-item">🐳 Docker</div>
+                <div class="skill-item">🔀 Git & GitHub</div>
+                <div class="skill-item">🐧 Linux / WSL2</div>
+                <div class="skill-item">📦 Entornos Virtuales</div>
+                <div class="skill-item">🐼 Pandas</div>
+                <div class="skill-item">📊 Matplotlib</div>
+                <div class="skill-item">🗄️ SQL</div>
+                <div class="skill-item">☕ Java</div>
+                <div class="skill-item">📈 R</div>
+                <div class="skill-item">🐘 Hadoop</div>
+                <div class="skill-item">💾 Cassandra</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Julia Rojas Pereyra. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

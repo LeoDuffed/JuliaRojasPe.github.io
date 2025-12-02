@@ -1,0 +1,517 @@
+/* CSS Variables - Color Palette */
+:root {
+    --color-accent-dark-red: #A33320;
+    --color-bg-cream: #F8F5F0;
+    --color-bg-yellow: #F3E79A;
+    --color-bg-peach-light: #FDF1EC;
+    --color-text-dark: #333333;
+    --color-accent-light-blue: #A8C5E6;
+    --color-white: #FFFFFF;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--color-bg-cream);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: 'Recoleta', serif;
+    font-weight: 700;
+}
+
+/* Section A: Header Nav Bar */
+.header-nav {
+    background-color: var(--color-accent-dark-red);
+    width: 100%;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    transition: opacity 0.3s ease;
+}
+
+.nav-link:hover {
+    opacity: 0.8;
+}
+
+/* Section B: Hero Section */
+.hero-section {
+    padding: 4rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.hero-left {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image-placeholder {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-right {
+    background: repeating-linear-gradient(
+        90deg,
+        #E8F4F8 0px,
+        #E8F4F8 20px,
+        #FFFFFF 20px,
+        #FFFFFF 40px
+    );
+    padding: 3rem;
+    border-radius: 15px;
+    position: relative;
+}
+
+.hero-logo {
+    font-size: 2.5rem;
+    color: var(--color-accent-dark-red);
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.hero-title {
+    font-size: 3rem;
+    color: var(--color-text-dark);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.hero-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+.hero-text strong {
+    color: var(--color-accent-dark-red);
+    font-weight: 600;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.05em;
+}
+
+.btn-primary {
+    background-color: var(--color-accent-dark-red);
+    color: var(--color-white);
+}
+
+.btn-primary:hover {
+    background-color: #8B2A18;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(163, 51, 32, 0.3);
+}
+
+.btn-secondary {
+    background-color: var(--color-accent-light-blue);
+    color: var(--color-text-dark);
+}
+
+.btn-secondary:hover {
+    background-color: #8FB0D4;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(168, 197, 230, 0.3);
+}
+
+/* Section C: Marquee/Ticker Bar */
+.marquee-section {
+    background-color: var(--color-bg-cream);
+    border-top: 2px solid var(--color-accent-dark-red);
+    border-bottom: 2px solid var(--color-accent-dark-red);
+    padding: 1rem 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.marquee-content {
+    display: flex;
+    animation: marquee 20s linear infinite;
+    gap: 3rem;
+}
+
+.marquee-content span {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--color-accent-dark-red);
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Section D: Introduction with Hand-Drawn Elements */
+.intro-section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.intro-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    position: relative;
+}
+
+.intro-arrow-left,
+.intro-arrow-right {
+    flex-shrink: 0;
+    width: 80px;
+    height: 200px;
+    opacity: 0.7;
+}
+
+.intro-arrow-left svg,
+.intro-arrow-right svg {
+    width: 100%;
+    height: 100%;
+}
+
+.intro-text {
+    font-family: 'Recoleta', serif;
+    font-size: 2rem;
+    text-align: center;
+    max-width: 800px;
+    line-height: 1.4;
+    color: var(--color-text-dark);
+}
+
+/* Section E: The Dashed Call-to-Action Box */
+.cta-section {
+    padding: 3rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta-box {
+    background-color: var(--color-bg-peach-light);
+    border: 3px dashed var(--color-accent-dark-red);
+    border-radius: 15px;
+    padding: 3rem;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+.cta-eyebrow {
+    background-color: var(--color-accent-light-blue);
+    color: var(--color-text-dark);
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+}
+
+.cta-title {
+    font-family: 'Recoleta', serif;
+    font-size: 2.5rem;
+    color: var(--color-text-dark);
+    margin-bottom: 2rem;
+}
+
+/* Section F: Section Divider Heading */
+.divider-section {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.divider-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--color-text-dark);
+    text-transform: uppercase;
+}
+
+/* Section G: The Three-Column Card Section */
+.projects-section {
+    background-color: var(--color-bg-yellow);
+    padding: 4rem 2rem;
+}
+
+.projects-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+.project-card {
+    background-color: var(--color-bg-cream);
+    border: 3px solid var(--color-bg-yellow);
+    border-radius: 20px;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.project-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.project-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--color-accent-dark-red);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.project-title {
+    font-family: 'Recoleta', serif;
+    font-size: 2rem;
+    color: var(--color-text-dark);
+    margin-bottom: 1.5rem;
+}
+
+.project-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+    text-align: justify;
+}
+
+.project-text strong {
+    color: var(--color-accent-dark-red);
+    font-weight: 600;
+}
+
+.project-text em {
+    font-style: italic;
+    color: var(--color-accent-dark-red);
+}
+
+.project-card .btn {
+    align-self: center;
+    margin-top: auto;
+}
+
+/* Extra Section: Software Skills */
+.skills-section {
+    padding: 4rem 2rem;
+    background-color: var(--color-bg-cream);
+}
+
+.skills-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skills-title {
+    font-family: 'Recoleta', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--color-text-dark);
+    margin-bottom: 3rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    justify-items: center;
+}
+
+.skill-item {
+    background-color: var(--color-white);
+    border: 2px solid var(--color-accent-dark-red);
+    border-radius: 15px;
+    padding: 1.5rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 250px;
+}
+
+.skill-item:hover {
+    background-color: var(--color-accent-dark-red);
+    color: var(--color-white);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(163, 51, 32, 0.3);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--color-accent-dark-red);
+    color: var(--color-white);
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-right {
+        order: -1;
+    }
+    
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .intro-arrow-left,
+    .intro-arrow-right {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-logo {
+        font-size: 2rem;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-text {
+        font-size: 1rem;
+    }
+    
+    .intro-text {
+        font-size: 1.5rem;
+    }
+    
+    .cta-title {
+        font-size: 2rem;
+    }
+    
+    .project-title {
+        font-size: 1.5rem;
+    }
+    
+    .skills-title {
+        font-size: 2rem;
+    }
+    
+    .nav-container {
+        gap: 1rem;
+    }
+    
+    .nav-link {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section,
+    .intro-section,
+    .cta-section,
+    .projects-section,
+    .skills-section {
+        padding: 2rem 1rem;
+    }
+    
+    .hero-right {
+        padding: 2rem 1.5rem;
+    }
+    
+    .cta-box {
+        padding: 2rem 1.5rem;
+    }
+    
+    .project-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
