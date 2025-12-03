@@ -65,21 +65,33 @@ h1, h2, h3 {
 
 /* Section B: Hero Section */
 .hero-section {
-    padding: 4rem 2rem;
-    max-width: 1400px;
-    margin: 0 auto;
+    min-height: 100vh;
+    width: 100vw;
+    padding: 4rem 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
 }
 
 .hero-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
+    gap: 0;
+    align-items: stretch;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 0;
 }
 
 .hero-left {
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding-right: 3rem;
 }
 
 .hero-image-placeholder {
@@ -105,8 +117,32 @@ h1, h2, h3 {
         #FFFFFF 40px
     );
     padding: 3rem;
-    border-radius: 15px;
+    border-radius: 15px 0 0 15px;
     position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 100%;
+}
+
+/* Make striped background extend to right edge on larger screens */
+@media (min-width: 1401px) {
+    .hero-right {
+        width: calc(100% + ((100vw - 1400px) / 2));
+        margin-right: calc(-1 * ((100vw - 1400px) / 2));
+    }
+}
+
+@media (max-width: 1400px) {
+    .hero-right {
+        width: 100%;
+        margin-right: 0;
+        border-radius: 15px;
+    }
+    
+    .hero-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 }
 
 .hero-logo {
@@ -216,6 +252,7 @@ h1, h2, h3 {
     padding: 4rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
 }
 
 .intro-container {
@@ -255,6 +292,7 @@ h1, h2, h3 {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .cta-box {
@@ -305,6 +343,7 @@ h1, h2, h3 {
 .projects-section {
     background-color: var(--color-bg-yellow);
     padding: 4rem 2rem;
+    position: relative;
 }
 
 .projects-container {
@@ -380,6 +419,7 @@ h1, h2, h3 {
 .skills-section {
     padding: 4rem 2rem;
     background-color: var(--color-bg-cream);
+    position: relative;
 }
 
 .skills-container {
@@ -422,6 +462,125 @@ h1, h2, h3 {
     box-shadow: 0 5px 15px rgba(163, 51, 32, 0.3);
 }
 
+/* Decorative Stars */
+.deco-star {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.deco-star::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2L14.5 8.5L21 11L14.5 13.5L12 20L9.5 13.5L3 11L9.5 8.5L12 2Z' fill='%23A33320' stroke='%23A33320' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+/* Star Positions */
+.star-nav-1 {
+    top: 10px;
+    left: 5%;
+    transform: rotate(-15deg);
+    width: 20px;
+    height: 20px;
+}
+
+.star-nav-2 {
+    top: 10px;
+    right: 5%;
+    transform: rotate(20deg);
+    width: 25px;
+    height: 25px;
+}
+
+.star-hero-1 {
+    top: 15%;
+    left: 3%;
+    transform: rotate(-25deg);
+    width: 35px;
+    height: 35px;
+}
+
+.star-hero-2 {
+    top: 60%;
+    right: 2%;
+    transform: rotate(30deg);
+    width: 28px;
+    height: 28px;
+}
+
+.star-hero-3 {
+    bottom: 20%;
+    left: 1%;
+    transform: rotate(-10deg);
+    width: 22px;
+    height: 22px;
+}
+
+.star-intro-1 {
+    top: 10%;
+    left: 2%;
+    transform: rotate(15deg);
+    width: 30px;
+    height: 30px;
+}
+
+.star-intro-2 {
+    bottom: 10%;
+    right: 3%;
+    transform: rotate(-20deg);
+    width: 26px;
+    height: 26px;
+}
+
+.star-cta-1 {
+    top: 20%;
+    right: 8%;
+    transform: rotate(25deg);
+    width: 24px;
+    height: 24px;
+}
+
+.star-projects-1 {
+    top: 5%;
+    left: 4%;
+    transform: rotate(-18deg);
+    width: 32px;
+    height: 32px;
+}
+
+.star-projects-2 {
+    bottom: 5%;
+    right: 5%;
+    transform: rotate(22deg);
+    width: 28px;
+    height: 28px;
+}
+
+.star-skills-1 {
+    top: 15%;
+    left: 6%;
+    transform: rotate(-12deg);
+    width: 26px;
+    height: 26px;
+}
+
+.star-skills-2 {
+    bottom: 20%;
+    right: 4%;
+    transform: rotate(18deg);
+    width: 30px;
+    height: 30px;
+}
+
 /* Footer */
 .footer {
     background-color: var(--color-accent-dark-red);
@@ -429,10 +588,16 @@ h1, h2, h3 {
     text-align: center;
     padding: 2rem;
     font-size: 0.9rem;
+    position: relative;
 }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+    .hero-section {
+        min-height: auto;
+        padding: 3rem 2rem;
+    }
+    
     .hero-container {
         grid-template-columns: 1fr;
     }
@@ -447,6 +612,10 @@ h1, h2, h3 {
     
     .intro-arrow-left,
     .intro-arrow-right {
+        display: none;
+    }
+    
+    .deco-star {
         display: none;
     }
 }
